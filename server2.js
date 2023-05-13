@@ -1,7 +1,9 @@
 // import { BlobServiceClient, ContainerClient } from "@azure/storage-blob";
 const fs = require("fs");
-const key = "DefaultEndpointsProtocol=https;AccountName=sampledatafordeproject;AccountKey=8kaB2Utxg93oCR5VnSp8TDrTLbZYTljvG+PDA9YRiWnSbmANyZO6QZKtUJS79dixAq2NBjxxHBGR+ASteoZucg==;BlobEndpoint=https://sampledatafordeproject.blob.core.windows.net/;QueueEndpoint=https://sampledatafordeproject.queue.core.windows.net/;TableEndpoint=https://sampledatafordeproject.table.core.windows.net/;FileEndpoint=https://sampledatafordeproject.file.core.windows.net/;";
-const containerName = "website-data";
+require("dotenv").config();
+
+const key = process.env.KEY;
+const containerName = process.env.CONTAINER;
 // const blobServiceClient = new BlobServiceClient(key);
 // const containerClient = blobServiceClient.getContainerClient(name);
 // console.log(containerClient, blobServiceClient)
